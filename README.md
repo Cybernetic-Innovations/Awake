@@ -22,4 +22,3 @@ awake while you're away.
  _Outputs a random quote and depending on color you can tell the status:_
  - _**Cyan**_ - Activity
  - _**Yellow**_ - No Activity
-
