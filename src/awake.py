@@ -15,7 +15,7 @@ pyautogui.FAILSAFE = False
 lastMouse = pyautogui.position()
 
 parser = argparse.ArgumentParser(description='Keep your pc awake while your away')
-parser.add_argument('-m', dest='minutes', type=int, default=3, help="Time between activity check, default=3")
+parser.add_argument('-m', dest='minutes', type=int, default=1, help="Time between activity check, default=3")
 parser.add_argument('-k', dest='key', type=str, default='None', help="Key to press, default=None")
 args = parser.parse_args()
 
@@ -28,8 +28,8 @@ def loadQuotes():
 
 
 def move(curPosition):
-    positionX = [random.randrange(-10, 10, 1) for i in range(5)]
-    positionY = [random.randrange(-10, 10, 1) for i in range(5)]
+    positionX = [random.randrange(-10, 10, 1) for _ in range(5)]
+    positionY = [random.randrange(-10, 10, 1) for _ in range(5)]
 
     for i in range(0, len(positionX)):
         pyautogui.moveTo(curPosition.x + positionX[i], curPosition.y + positionY[i])
